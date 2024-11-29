@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+java -jar /KEEPS/lib/commons-ip-cits-siard.jar "$@"

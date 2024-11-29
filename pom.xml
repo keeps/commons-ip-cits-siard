@@ -22,6 +22,15 @@
         </repository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/keeps/commons-ip</url>
+        </repository>
+    </repositories>
+
+
     <developers>
         <developer>
             <id>mguimaraes</id>

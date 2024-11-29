@@ -98,9 +98,9 @@ jobs:
             ghcr.io/keeps/commons-ip-cits-siard
           #            keeps/roda
           tags: |
-            type=semver,pattern=v{{version}}
-            type=semver,pattern=v{{major}}.{{minor}}
-            type=semver,pattern=v{{major}}
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
           flavor: |
             latest=false
       - name: Set up Docker Buildx
@@ -131,7 +131,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: target/${{ env.release_version }}.jar
+          file: target/commons-ip-cits-siard-cli-${{ env.release_version }}.jar
           asset_name: commons-ip-cits-siard-cli-${{ env.release_version }}.jar
           tag: ${{ github.ref }}
           release_name: ${{ github.ref_name }}

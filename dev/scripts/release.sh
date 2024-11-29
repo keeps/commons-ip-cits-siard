@@ -8,7 +8,7 @@ release() {
 ################################
 EOF
   RELEASE_VERSION=$1
-  RELEASE_TAG="$RELEASE_VERSION"
+  RELEASE_TAG="v$RELEASE_VERSION"
   # Ensure all classes have license header
   mvn license:format
 
